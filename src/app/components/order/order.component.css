@@ -9,3 +9,6 @@ input{
   height: 75%;
   overflow-y: auto;
 }
+button{
+  width: 500px;
+}
