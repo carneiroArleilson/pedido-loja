@@ -1,0 +1,24 @@
+<div class="m-3">
+  <div class="d-flex">
+    <h1 class="">Pedido nº 0000</h1>
+  </div>
+  <div class="d-flex justify-content-between">
+    <div>
+      <h4>Cod:</h4>
+      <input type="text" size="5" />
+    </div>
+    <div>
+      <h4>Qtde:</h4>
+      <input type="text" size="5" />
+    </div>
+    <h1 class="bi bi-plus-square-fill btn-outline-primary  m-1 d-inline-block"></h1>
+  </div>
+  <div class="m-3 border barra"><app-list></app-list></div>
+  <footer>
+    <h2>Total: R$000,00</h2>
+    <div class="d-flex justify-content-around">
+      <button class="btn btn-danger" (click)="retrospect()">cancelar</button>
+      <button class="btn btn-primary">comprar</button>
+    </div>
+  </footer>
+</div>

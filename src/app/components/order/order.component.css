@@ -1,0 +1,11 @@
+h4{
+  display: inline-block;
+}
+input{
+  margin-left: 0.5rem;
+  margin-right: 1rem;
+}
+.barra{
+  height: 75%;
+  overflow-y: auto;
+}
