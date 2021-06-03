@@ -1,18 +1,22 @@
 <div class="d-flex align-items-center justify-content-center flex-column h-100">
-  <img
-    src="assets/LOGO.png"
-    class="img-responsive m-1"
-    style=" width: 50%"
-  />
-  <h1 class="m-1">vendedor</h1>
-  <select ng-model="selectedCar" class="m-1">
-    <option>vendedora 1</option>
-    <option>vendedora 1</option>
-    <option>vendedora 1</option>
+  <img src="assets/LOGO.png" class="img-responsive m-1" />
+  <select ng-model="selectedCar" [(ngModel)]="vendedoraEscolhida" class="m-1">
+    <option *ngFor="let vendedoras of vendedora" [ngValue]="vendedoras.id">
+      <p>{{ vendedoras.name }}</p>
+    </option>
   </select>
-  <select ng-model="selectedCar" class="m-1">
-    <option>varejo</option>
-    <option>atacado</option>
+  <select ng-model="selectedCar" [(ngModel)]="operadorEscolhido" class="m-1">
+    <option *ngFor="let operadores of operador" [ngValue]="operadores.id">
+      <p>{{ operadores.name }}</p>
+    </option>
   </select>
-  <button class="btn btn-primary m-1" (click)="redirect()">ENTRAR</button>
+  <button
+    class="btn btn-primary m-1"
+    [ngClass]="{
+      disabled: operadorEscolhido === 0 || vendedoraEscolhida === 0
+    }"
+    (click)="redirect()"
+  >
+    ENTRAR
+  </button>
 </div>

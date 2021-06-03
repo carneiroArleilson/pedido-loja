@@ -1,6 +1,7 @@
-<div class="m-3">
+<div class="m-3 ">
   <div class="d-flex justify-content-center">
-    <h1 class="">Pedido nº 0000</h1>
+    <h4 class="">vend:  </h4>
+    <h4>op: atacado</h4>
   </div>
   <div class="d-flex justify-content-between">
     <div>
@@ -18,7 +19,20 @@
     <h2 class="d-flex justify-content-center">Total: R$000,00</h2>
     <div class="d-flex justify-content-between">
       <button class=" btn btn-danger me-1" (click)="retrospect()">cancelar</button>
-      <button class="btn btn-primary ms-1">comprar</button>
+      <button class="btn btn-primary ms-1" data-bs-toggle="modal" data-bs-target="#exampleModal">comprar</button>
     </div>
   </footer>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h1 class="">Pedido nº 0000</h1>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="retrospect()">Finalizar</button>
+      </div>
+    </div>
+  </div>
 </div>
